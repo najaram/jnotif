@@ -40,12 +40,22 @@ def clean_text(text):
 
 
 def save_jobs(title, position, url, body):
+    print_jobs(title, position, url, body)
+
     with open('job_posting.txt', 'a+') as file:
         file.write(title + '\n')
         file.write(position + '\n')
         file.write(base_url + url + '\n')
         file.write(body + '\n')
         file.write('\n')
+
+
+def print_jobs(title, posiiton, url, body):
+    print(title)
+    print(posiiton)
+    print(base_url + url)
+    print(body)
+    print('----------------------------')
 
 
 open_site(input_text)
